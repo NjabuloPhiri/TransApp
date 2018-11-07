@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>random guess calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Form to guess a number from 1 to 10</h2>
+      <form v-on:submit.prevent>
+        <div>
+            <label>number</label>
+            <div><input v-model="user_guess"> </div>
+            <div></div>
+          </div>
+          
+          <div>
+            <button v-on:click="showNum">submit</button>
+          </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
