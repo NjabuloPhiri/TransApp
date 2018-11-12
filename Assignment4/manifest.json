@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "365Stream",
+    "description": "This extension shows videos and movies",
+    "version": "1.0.5",
+
+    "browser_action": {
+        "default_icon": "public-transport-icon.png",
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/"
+    ]
+}
+
+  
