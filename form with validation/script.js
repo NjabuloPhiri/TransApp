@@ -17,7 +17,7 @@ const app = new Vue ({
 
             if(this.psw.length < 6){
                 this.passwordError = false
-                this.passwordErrorMessage = 'password too short'
+                this.passwordErrorMessage.('password too short')
             }
             if(this.uname.length < 3){
                 this.usernameError = true

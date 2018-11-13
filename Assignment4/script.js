@@ -27,5 +27,6 @@ function loadMap(){
             document.getElementById('start').value = event.lngLat.lng + ',' + event.lngLat.lat
 
         }
+        
     })
 }
