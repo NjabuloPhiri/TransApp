@@ -5,15 +5,15 @@ const app = new Vue ({
         psw: "",
         usernameError: false,
         passwordError: false,
-        usernameErrorMessage: '',
-        passwordErrorMessage: '' 
+        usernameErrorMessage: [],
+        passwordErrorMessage: [] 
 
     },
     methods: {
         send: function(){
             this.usernameError = false
             this.passwordError = false
-            this.usernameErrorMessage = ''
+            this.usernameErrorMessage = []
 
             if(this.psw.length < 6){
                 this.passwordError = false
@@ -21,11 +21,11 @@ const app = new Vue ({
             }
             if(this.uname.length < 3){
                 this.usernameError = true
-                this.usernameErrorMessage = 'username too short'
+                this.usernameErrorMessage.push({ msg: 'username too short', date: Date.now()})
             }
             if(this.uname.includes('@')){
                 this.usernameError = true
-                this.usernameErrorMessage = 'Username must be a valid email address'
+                this.usernameErrorMessage.push('Username must be a valid email address')
             }
         }
     }

@@ -9,14 +9,28 @@
             <div class="field">
                 <label class="label">Username</label>
                 <input class="input" v-model="uname" type="text" id="username" v-bind:class="{ 'is-danger': usernameError }"/>
-                <div class="has-text-danger" v-if="usernameError == true">There was an issue with your username</div>
+               <!-- <div class="has-text-danger" v-if="usernameError == true">There was an issue with your username</div> -->
+               <ul>
+                   <li v-for="error in usernameError">
+                       {{ error.msg }}
+                       <span>{{ error.date }}</span>
+                       <small>{{ new Date(error.date).toString() }}</small>
+                   </li>
+               </ul>
             </div>
 
             <div class="field">
                 <label class="label">Password</label>
                 <input class="input" v-model="psw" type="password" id="password" v-bind:class="{ 'is-danger': passwordError }"
                 v-bind:class="is-danger"/>
-                <div class="has-text-danger" v-if="passwordError == false">There was an issue with your password</div>
+                <!--<div class="has-text-danger" v-if="passwordError == false">There was an issue with your password</div> -->
+                <ul>
+                    <li v-for="error in passwordError">
+                        {{ error.msg }}
+                        <span>{{ error.date }}</span>
+                        <small>{{ new Date(error.date).toString() }}</small>
+                    </li>
+                </ul>
             </div>
 
             <div class="field">
