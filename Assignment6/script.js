@@ -65,7 +65,7 @@ var app = new Vue({
                     var location = response.Response.View[0].Result[0].Location.DisplayPosition
                     _this.startPoint = L.marker([location.Latitude, location.Longitude]).addTo(map)
                     _this.autoCompleteResults = []                    
-                })
+                }) 
         },
 
         resultSelect: function (result) {

@@ -10,7 +10,7 @@
     //javascript
     'index.js',
     //assets or images
-    'public-transport-icon.png'
+    'public-transport-icon.png' 
  ];
 var cacheName, contentToCache;
 
@@ -20,7 +20,7 @@ var cacheName, contentToCache;
     e.waitUntil(
         caches.open(cacheName).then(function(cache){
             return cache.addAll(contentToCache);
-        })
+        }) 
     );
  });
 

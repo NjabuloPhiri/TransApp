@@ -7,9 +7,9 @@ var app  = new Vue({
         routePage: function(){
             window.location.href='route.html';
         }
-    }
+    } 
 })
-
+ 
 
 
 
